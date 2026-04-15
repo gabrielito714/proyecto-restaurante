@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor & Arte | Restaurante Gourmet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Sabor & <span>Arte</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#menu">Menú</a></li>
+            <li><a href="#clientes">Clientes</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <div class="cart-icon" onclick="toggleCart()">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count">0</span>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">Restaurante Gourmet</p>
+            <h1>Delicias que llegan a tu puerta</h1>
+            <p>Sabores únicos, ingredientes frescos y una experiencia culinaria creada para ti.</p>
+            <a href="#menu" class="btn-main">Explorar Menú</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="menu" class="products">
+            <div class="section-header">
+                <span class="section-label">Menú destacado</span>
+                <h2 class="section-title">Nuestros platos favoritos</h2>
+            </div>
+            <div class="product-grid">
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1601924928310-8a0b16a90a92?auto=format&fit=crop&w=600&q=80"
+                            alt="Pizza Pepperoni Special">
+                    </div>
+                    <h3>Pizza Pepperoni Special</h3>
+                    <p>Masa artesanal, salsa de tomate casera y queso fundido.</p>
+                    <div class="product-footer">
+                        <span class="price">$12.99</span>
+                        <button class="btn-add" onclick="addToCart('Pizza Pepperoni', 12.99)">Añadir</button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80"
+                            alt="Hamburguesa Gourmet">
+                    </div>
+                    <h3>Hamburguesa Gourmet</h3>
+                    <p>Carne premium, queso cheddar y aderezo especial.</p>
+                    <div class="product-footer">
+                        <span class="price">$10.50</span>
+                        <button class="btn-add" onclick="addToCart('Hamburguesa Gourmet', 10.50)">Añadir</button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80"
+                            alt="Ensalada Mediterránea">
+                    </div>
+                    <h3>Ensalada Mediterránea</h3>
+                    <p>Mix fresco, aceitunas, queso feta y vinagreta de limón.</p>
+                    <div class="product-footer">
+                        <span class="price">$8.99</span>
+                        <button class="btn-add" onclick="addToCart('Ensalada Mediterránea', 8.99)">Añadir</button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80"
+                            alt="Paella de Mariscos">
+                    </div>
+                    <h3>Paella de Mariscos</h3>
+                    <p>Arroz perfumado, camarón, calamar y sabor auténtico.</p>
+                    <div class="product-footer">
+                        <span class="price">$14.99</span>
+                        <button class="btn-add" onclick="addToCart('Paella de Mariscos', 14.99)">Añadir</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="clientes" class="testimonials">
+            <div class="section-header">
+                <span class="section-label">Opiniones</span>
+                <h2 class="section-title">Clientes felices</h2>
+            </div>
+            <div class="testimonial-grid">
+                <article class="testimonial-card">
+                    <p>"La mejor comida que he probado en la ciudad. La entrega llegó antes de lo esperado."</p>
+                    <h4>Laura Gómez</h4>
+                    <span>Amante de la buena cocina</span>
+                </article>
+                <article class="testimonial-card">
+                    <p>"El sabor es espectacular y la presentación es impecable. ¡Recomiendo al 100%!"</p>
+                    <h4>Carlos Díaz</h4>
+                    <span>Cliente frecuente</span>
+                </article>
+                <article class="testimonial-card">
+                    <p>"Pedí para una cena familiar y todos quedaron encantados con la calidad y el servicio."</p>
+                    <h4>Mariana Ruiz</h4>
+                    <span>Foodie</span>
+                </article>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact">
+            <div class="section-header">
+                <span class="section-label">Contacto</span>
+                <h2 class="section-title">Reserva y pedidos</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>Estamos listos para atenderte</h3>
+                    <p>Haz tu pedido por teléfono, WhatsApp o reserva tu mesa en pocos pasos.</p>
+                    <div class="contact-info">
+                        <p><strong>Teléfono:</strong> +34 600 123 456</p>
+                        <p><strong>Email:</strong> info@saborarte.com</p>
+                        <p><strong>Dirección:</strong> Calle Gourmet 45, Madrid</p>
+                    </div>
+                    <a href="mailto:info@saborarte.com" class="btn-secondary">Escríbenos</a>
+                </div>
+                <div class="contact-card contact-card-secondary">
+                    <h3>Horario de atención</h3>
+                    <ul>
+                        <li>Lunes - Viernes: 12:00 - 23:00</li>
+                        <li>Sábado: 13:00 - 00:00</li>
+                        <li>Domingo: 13:00 - 22:00</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleCart()">&times;</span>
+            <h3>Tu Carrito</h3>
+            <div id="cart-items" class="cart-items">No hay productos aún.</div>
+            <div class="cart-total">
+                <span>Total</span>
+                <strong>$<span id="total-price">0.00</span></strong>
+            </div>
+            <button class="btn-checkout" onclick="processOrder()">Realizar pedido</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2026 Sabor & Arte. Cocina con pasión y entrega con cariño.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
